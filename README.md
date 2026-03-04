@@ -1,112 +1,151 @@
 # Full Stack Todo Application
 
 ## Overview
-This is a Full Stack Todo Application built using Spring Boot, PostgreSQL, and React (Vite).  
-The project demonstrates complete CRUD operations with proper backend-frontend integration and database persistence.
+
+This is a **Full Stack Todo Application** built using **Spring Boot, PostgreSQL, and React (Vite)**.
+The project demonstrates complete **CRUD operations**, backend–frontend communication, and persistent storage using PostgreSQL.
 
 ---
 
-## Tech Stack
+# Tech Stack
 
-### Backend
-- Java 17
-- Spring Boot
-- Spring Data JPA
-- REST APIs
-- Maven
+## Backend
 
-### Frontend
-- React (Vite)
-- Axios
-- CSS
+* Java 17
+* Spring Boot
+* Spring Data JPA
+* REST APIs
+* Maven
 
-### Database
-- PostgreSQL
+## Frontend
 
-### Deployment
-- Docker
-- Render (Cloud Deployment)
+* React (Vite)
+* Axios
+* CSS
 
----
+## Database
 
-## Features
+* PostgreSQL
 
-- Create new todo
-- Fetch all todos
-- Update existing todo
-- Delete todo
-- Persistent storage using PostgreSQL
-- RESTful API architecture
-- Frontend connected to backend APIs
+## Deployment
+
+* Docker
+* Render (Cloud Deployment)
 
 ---
 
-## Project Structure
+# Features
 
+* Create new todo
+* Fetch all todos
+* Update existing todo
+* Delete todo
+* Persistent storage using PostgreSQL
+* RESTful API architecture
+* React frontend connected to Spring Boot backend
 
-Todo-Fullstack-app/
+---
+
+# Project Structure
+
+```
+Todo-Fullstack-App
 │
-├── Backend/ → Spring Boot application
-├── Frontend/ → React application
-├── Dockerfile → Container configuration
-
-
----
-
-## API Endpoints
-
-| Method | Endpoint        | Description        |
-|--------|----------------|-------------------|
-| GET    | /todos         | Fetch all todos   |
-| POST   | /todos         | Create new todo   |
-| PUT    | /todos/{id}    | Update todo       |
-| DELETE | /todos/{id}    | Delete todo       |
+├── Backend
+│     └── Spring Boot REST API
+│
+├── Frontend
+│     └── React + Vite Application
+│
+└── Dockerfile
+      └── Container configuration
+```
 
 ---
 
-## How to Run Locally
+# API Endpoints
 
-### Backend
-1. Navigate to Backend folder
-2. Run:
+| Method | Endpoint      | Description     |
+| ------ | ------------- | --------------- |
+| GET    | `/todos`      | Fetch all todos |
+| POST   | `/todos`      | Create new todo |
+| PUT    | `/todos/{id}` | Update todo     |
+| DELETE | `/todos/{id}` | Delete todo     |
 
+---
+
+# How to Run Locally
+
+## 1. Start Backend
+
+Navigate to the **Backend** folder.
+
+Run:
+
+```
 ./mvnw spring-boot:run
+```
 
-3. Server runs on:
+The backend server runs on:
 
+```
 http://localhost:8080
+```
 
+You can verify the API by visiting:
 
-### Frontend
-1. Navigate to Frontend folder
-2. Install dependencies:
+```
+http://localhost:8080/todos
+```
 
+---
+
+## 2. Start Frontend
+
+Navigate to the **Frontend** folder.
+
+Install dependencies:
+
+```
 npm install
+```
 
-3. Start:
+Start the development server:
 
+```
 npm run dev
+```
 
+Frontend runs on:
 
----
-
-## What This Project Demonstrates
-
-- Understanding of REST API design
-- Database integration using JPA
-- Frontend-Backend communication
-- Full-stack architecture
-- Docker-based deployment setup
+```
+http://localhost:5173
+```
 
 ---
 
-## Conclusion
+## 3. Open the Application
 
-This project demonstrates a complete full-stack application workflow, including backend REST API development, database integration, frontend implementation, and containerized deployment setup.  
+Open your browser and go to:
 
-It reflects practical understanding of real-world application architecture and full-stack development concepts.
+```
+http://localhost:5173
+```
+
+The React frontend will communicate with the Spring Boot backend running on **port 8080**.
 
 ---
 
-## Author
-Developed by Ruchika N  
+# What This Project Demonstrates
+
+* REST API design using Spring Boot
+* Database integration with PostgreSQL and JPA
+* Frontend–backend communication
+* Full-stack architecture
+* Containerized deployment using Docker
+
+---
+
+# Author
+
+Developed by **Ruchika N**
